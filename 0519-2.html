@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 900px;
+/*            height: 300px;*/
+            background-color: #535353;
+/*            overflow: auto*/
+        }
+        .clearfix::after {
+            content:"";
+            display: block;
+            clear: both;
+        }
+        .box {
+            width: 280px;
+            height: 300px;
+            background-color: #ff00e2;
+            float: left;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
