@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*
+            定位
+            靜態定位 static
+            相對定位 relative
+            絕對定位 absolute
+            固定定位 fixed
+        */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #ff0000;
+            position: absolute;
+            right: 100px;
+            bottom: 20px;
+            z-index: 9999;
+        }
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: #b1ff00;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            left: 0;
+            margin: auto;
+            z-index: 99;
+        }
+        .container {
+            width: 600px;
+            height: 400px;
+            background-color: #aaa;
+            position: relative;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="box2"></div>
+    </div>
+    <div class="box"></div>
+    
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, optio eligendi quibusdam, placeat id corrupti accusamus tempore minima at, impedit porro maiores labore expedita laboriosam sit cum ducimus facilis autem.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, optio eligendi quibusdam, placeat id corrupti accusamus tempore minima at, impedit porro maiores labore expedita laboriosam sit cum ducimus facilis autem.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, optio eligendi quibusdam, placeat id corrupti accusamus tempore minima at, impedit porro maiores labore expedita laboriosam sit cum ducimus facilis autem.
+    </p>
+</body>
+</html>
