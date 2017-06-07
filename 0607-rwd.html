@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*CSS RESET*/
+        body,h1,h2,h3,h4,h5,h6,p,ul,li,ol {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+            border: 0;
+        }
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .full-width {
+            width: 100%;
+        }
+        .fixed-width {
+            width: 960px;
+            margin: auto;
+        }
+        .col-1 {
+            width: 100%;
+        }
+        .col-2 {
+            width: 50%;
+        }
+        .col-3 {
+            width: calc(100%/3);
+        }
+        .col-4 {
+            width: 25%;
+        }
+        .col-5 {
+            width: 20%;
+        }
+        .col-2,.col-3,.col-4,.col-5 {
+            float: left;    
+        }
+    </style>
+</head>
+<body>
+    <div class="full-width">
+        <div class="fixed-width">
+            <div class="col-3">
+                <h2>qwerty</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui magnam odit reiciendis ad odio, itaque modi dicta soluta cumque rerum veritatis? Maiores minus ad provident officia, ut natus dolores rem!
+                </p>
+            </div>
+            <div class="col-3">
+                <h2>qwerty</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui magnam odit reiciendis ad odio, itaque modi dicta soluta cumque rerum veritatis? Maiores minus ad provident officia, ut natus dolores rem!
+                </p>
+            </div>
+            <div class="col-3">
+                <h2>qwerty</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui magnam odit reiciendis ad odio, itaque modi dicta soluta cumque rerum veritatis? Maiores minus ad provident officia, ut natus dolores rem!
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="full-width">
+        <div class="fixed-width">
+            <div class="col-2">
+               <h2>qwer</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis beatae eveniet ullam molestias magnam amet qui labore corporis quis, nihil dolor facere ducimus fuga, eligendi, quam fugiat assumenda odio ipsum?
+                </p>
+            </div>
+            <div class="col-2">
+               <h2>qwer</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis beatae eveniet ullam molestias magnam amet qui labore corporis quis, nihil dolor facere ducimus fuga, eligendi, quam fugiat assumenda odio ipsum?
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
