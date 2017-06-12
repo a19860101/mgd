@@ -1,4 +1,4 @@
-@media screen and (max-width:480px) {
+@media screen and (min-width:480px) and (max-width:600px){
     .full-width {
         width: 100%;
     }
@@ -16,7 +16,8 @@
         width: 100%;
     }
     .col-4 {
-        width: 100%;
+        width: 50%;
+        float:left
     }
     .col-5 {
         width: 100%;
