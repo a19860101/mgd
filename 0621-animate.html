@@ -12,21 +12,20 @@
             position: absolute;
             top: 0;
             left: 0;
-            animation: qq 1s 3 forwards;
-            /*infinite reverse altenate forwards*/
+            animation: qq 4s forwards  cubic-bezier(1,0,0,1);
+            /*infinite reverse alternate forwards*/
+            /*ease ease-in ease-out ease-in-out linear*/
         }
         @keyframes qq {
             0% {}
-            50% {left:200px;top:0;background-color: #fa0;}
-            100% {left:200px;top:200px; }
+            100% {left:400px;top:0;background-color: #fa0;}
+/*            100% {left:200px;top:200px; }*/
         }
     </style>
 </head>
 
 <body>
-    <div class="box">
-
-    </div>
+    <div class="box"></div>
 </body>
 
 </html>
