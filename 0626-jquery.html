@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        .t {
-            cursor: pointer;
-        }
+        .t {cursor: pointer;}
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
@@ -14,7 +12,9 @@
 //            $("h1").hide(300);
             $(".t").click(function(){
 //                $("p").hide();
-                $("p").toggle(600);
+//                $("p").toggle(600);
+//                $("p").fadeToggle();
+                $("p").slideToggle();
             });
         });
     </script>
