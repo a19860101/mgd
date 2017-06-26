@@ -3,15 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        .t {
+            cursor: pointer;
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            $("h1").hide();
+//            $("h1").hide(300);
+            $(".t").click(function(){
+//                $("p").hide();
+                $("p").toggle(600);
+            });
         });
     </script>
 </head>
 <body>
     <h1 class="t" id="t">QWERTY</h1>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, natus. Quam sapiente ut quidem adipisci provident quae est doloremque amet facilis assumenda voluptatem debitis, voluptas necessitatibus, animi illum, expedita incidunt!
+    </p>
     
     
     
