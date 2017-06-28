@@ -8,11 +8,20 @@
         $(document).ready(function(){
             $("nav a").click(function(){
                 var _target = $(this).data("target");
+                
 //                console.log(_target);
+                
                 var _offset = $("#"+_target).offset().top;
+                
 //                console.log(_offset);
+                
                 $("html,body").animate({
                     scrollTop:_offset
+                });
+            });
+            $("#gotop").click(function(){
+                $("html,body").animate({
+                    scrollTop:0
                 });
             });
         });
@@ -38,6 +47,20 @@
             height: 1500px;
             background-color: #ffd800;
         }
+        #gotop {
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            text-decoration: none;
+            position: fixed;
+            z-index: 9999;
+            right: 30px;
+            bottom: 30px;
+        }
     </style>
 </head>
 <body>
@@ -51,6 +74,7 @@
     <div id="blog"></div>
     <div id="product"></div>
     <div id="contact"></div>
+    <a href="#"id="gotop">TOP</a>
         
     
     
