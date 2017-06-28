@@ -3,6 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var a = $("#about").offset().top;
+            var b = $("#blog").offset().top;
+            var c = $("#contact").offset().top;
+            var speed = 3000;
+            $("nav a:nth-of-type(1)").click(function(){
+                $("html,body").animate({
+                    scrollTop:a
+                });
+            });
+                
+           
+            $("nav a:nth-of-type(2)").click(function(){
+                $("html,body").animate({
+                    scrollTop:b
+                },speed);
+            });
+            $("nav a:nth-of-type(3)").click(function(){
+                $("html,body").animate({
+                    scrollTop:c
+                },speed);
+            });
+            
+        });
+    </script>
+
     <style>
         #about {
             width: 100%;
@@ -23,9 +51,9 @@
 </head>
 <body>
     <nav>
-        <a href="">About</a>
-        <a href="">Blog</a>
-        <a href="">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
     </nav>
     <div id="about"></div>
     <div id="blog"></div>
