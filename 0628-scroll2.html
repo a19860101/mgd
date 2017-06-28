@@ -18,11 +18,13 @@
                 $("html,body").animate({
                     scrollTop:_offset
                 });
+                return false;
             });
             $("#gotop").click(function(){
                 $("html,body").animate({
                     scrollTop:0
                 });
+                return false;
             });
         });
     </script>
@@ -31,6 +33,20 @@
             margin: 0;
             padding: 0;
             font-family: helvetica;
+        }
+        nav {
+            height: 50px;
+            width: 100%;
+            line-height: 50px;
+            background-color: #333;
+            text-align: center;
+            position: fixed;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+            margin-right: 10px;
         }
         #about {
             width: 100%;
