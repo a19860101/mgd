@@ -28,6 +28,11 @@
             });
         });
     </script>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="desktop.css">
+    <link rel="stylesheet" href="tablet.css">
+    <link rel="stylesheet" href="tablet-small.css" >
+    <link rel="stylesheet" href="phone.css">
     <style>
         * {
             margin: 0;
@@ -82,6 +87,7 @@
             right: 30px;
             bottom: 30px;
         }
+
     </style>
 </head>
 <body>
@@ -91,7 +97,19 @@
         <a href="#" data-target="product">product</a>
         <a href="#" data-target="contact">Contact</a>
     </nav>
-    <div id="about"></div>
+    <div id="about" class="full-width">
+        <div class="fixed-width">
+            <div class="col-2">
+                <h2>qwert</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni enim sapiente doloremque, in culpa fuga officiis rerum iure optio obcaecati quasi, voluptatibus, id libero iste ipsum ipsam suscipit consequuntur. Ea.
+                </p>
+            </div>
+            <div class="col-2">
+                <img src="images/001.jpg" alt="">
+            </div>
+        </div>
+    </div>
     <div id="blog"></div>
     <div id="product"></div>
     <div id="contact"></div>
