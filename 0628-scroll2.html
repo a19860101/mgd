@@ -6,29 +6,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            var a = $("#about").offset().top;
-            var b = $("#blog").offset().top;
-            var c = $("#contact").offset().top;
-            var speed = 1500;
-            $("nav a:nth-of-type(1)").click(function(){
+            $("nav a").click(function(){
+                var _target = $(this).data("target");
+//                console.log(_target);
+                var _offset = $("#"+_target).offset().top;
+//                console.log(_offset);
                 $("html,body").animate({
-                    scrollTop:a
-                },speed);
+                    scrollTop:_offset
+                });
             });
-            $("nav a:nth-of-type(2)").click(function(){
-                $("html,body").animate({
-                    scrollTop:b
-                },speed);
-            });
-            $("nav a:nth-of-type(3)").click(function(){
-                $("html,body").animate({
-                    scrollTop:c
-                },speed);
-            });
-            
         });
     </script>
-
     <style>
         #about {
             width: 100%;
@@ -40,6 +28,11 @@
             height: 1000px;
             background-color: #ff0080;
         }
+        #product {
+            width: 100%;
+            height: 1500px;
+            background-color: #3b3b3b;
+        }
         #contact {
             width: 100%;
             height: 1500px;
@@ -49,12 +42,14 @@
 </head>
 <body>
     <nav>
-        <a href="#">About</a>
-        <a href="#">Blog</a>
-        <a href="#">Contact</a>
+        <a href="#" data-target="about">About</a>
+        <a href="#" data-target="blog">Blog</a>
+        <a href="#" data-target="product">product</a>
+        <a href="#" data-target="contact">Contact</a>
     </nav>
     <div id="about"></div>
     <div id="blog"></div>
+    <div id="product"></div>
     <div id="contact"></div>
         
     
