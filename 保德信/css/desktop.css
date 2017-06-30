@@ -1,69 +1,76 @@
 @media screen and (min-width:1170px) {
-/*
-        .full-width {
-            width: 100%;
-        }
-*/
-        .fixed-width {
-            width: 1170px;
-            margin: auto;
-        }
-        .col-2 {
-            width: 50%;
-            float: left;
-        }
-        #logo{
-            width: 140px;
-            height: 45px;
-            float: left;
-            position: relative;
-            padding-top: 20px;
-            padding-left: 20px;
-        }
-        header{
-            background-image: url(../images/kv.jpg);
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding-top: 200px;
-            padding-bottom: 200px;
-            text-align: center;
-        }
-        #main{
-            padding-top:40px;
-        }
-        .box1{
-            height:100%;
-            padding-right: 20px;
-            padding-left: 20px;
-            border-right: 0.5px;
-            border-right-style: dotted;
-        }
-        .box2{
-            height:100%;
-            padding-right: 20px;
-            padding-left: 20px;
-        }
-        p{
-            padding-top: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 60px;
-        }
-        h1{
-            font-size: 40px;
-            line-height: 60px;
-            letter-spacing: .5px;
-            text-align: center;
-            color: #000;
-            padding-bottom: 10px;  
-        }
-        h3{
-            font-size: 24px;
-            line-height: 30px;
-            letter-spacing: .5px;
-            text-align: center;
-            color: #4B913E;
-            padding-bottom: 10px;
-        }
+    .full-width {
+        width: 100%;
     }
+    .fixed-width {
+        width: 1170px;
+        margin: auto;
+    }
+    .col-2 {
+        width: 50%;
+        float: left;
+    }
+    #logo {
+        width: 140px;
+        height: 45px;
+        float: left;
+        position: relative;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+    header {
+        position: relative;
+    }
+    header #logo {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    header .fixed-width {
+        position: relative;
+        background-image: url(../images/kv.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding-top: 200px;
+        padding-bottom: 200px;
+        text-align: center;
+    }
+    #main {
+        padding-top: 40px;
+    }
+    .box1 {
+        height: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+        border-right: 0.5px;
+        border-right-style: dotted;
+    }
+    .box2 {
+        height: 100%;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    p {
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 60px;
+    }
+    h1 {
+        font-size: 40px;
+        line-height: 60px;
+        letter-spacing: .5px;
+        text-align: center;
+        color: #000;
+        padding-bottom: 10px;
+    }
+    h3 {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: .5px;
+        text-align: center;
+        color: #4B913E;
+        padding-bottom: 10px;
+    }
+}
