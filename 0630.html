@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="animate.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+         new WOW().init();
+    </script>
     <script>
         $(document).ready(function(){
             $("nav a").click(function(){
@@ -53,25 +58,34 @@
             margin-left: 10px;
             margin-right: 10px;
         }
+        .clearfix::after {
+            content:"";
+            display: block;
+            clear: both;
+        }
         #about {
             width: 100%;
-            height: 1200px;
             background-color: #00ebff;
+            padding-top: 200px;
+            padding-bottom: 200px;
         }
         #blog {
             width: 100%;
-            height: 1000px;
             background-color: #ff0080;
+            padding-top: 200px;
+            padding-bottom: 200px;
         }
         #product {
             width: 100%;
-            height: 1500px;
             background-color: #3b3b3b;
+            padding-top: 200px;
+            padding-bottom: 200px;
         }
         #contact {
             width: 100%;
-            height: 1500px;
             background-color: #ffd800;
+            padding-top: 200px;
+            padding-bottom: 200px;
         }
         #gotop {
             display: block;
@@ -98,7 +112,7 @@
         <a href="#" data-target="contact">Contact</a>
     </nav>
     <div id="about" class="full-width">
-        <div class="fixed-width">
+        <div class="fixed-width clearfix">
             <div class="col-2">
                 <h2>qwert</h2>
                 <p>
@@ -110,9 +124,46 @@
             </div>
         </div>
     </div>
-    <div id="blog"></div>
-    <div id="product"></div>
-    <div id="contact"></div>
+    <div id="blog" class="full-width">
+        
+        <div class="fixed-width clearfix">
+            <div class="col-2 wow fadeInLeft">
+                <h2>qwert</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni enim sapiente doloremque, in culpa fuga officiis rerum iure optio obcaecati quasi, voluptatibus, id libero iste ipsum ipsam suscipit consequuntur. Ea.
+                </p>
+            </div>
+            <div class="col-2 wow fadeInRight">
+                <img src="images/001.jpg" alt="" class="wow fadeInRight">
+            </div>
+        </div>
+    </div>
+    <div id="product"class="full-width">
+        <div class="fixed-width clearfix">
+            <div class="col-2 wow fadeInLeft">
+                <h2>qwert</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni enim sapiente doloremque, in culpa fuga officiis rerum iure optio obcaecati quasi, voluptatibus, id libero iste ipsum ipsam suscipit consequuntur. Ea.
+                </p>
+            </div>
+            <div class="col-2 wow fadeInRight">
+                <img src="images/001.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div id="contact"class="full-width">
+        <div class="fixed-width clearfix">
+            <div class="col-2 wow fadeInLeft">
+                <h2>qwert</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni enim sapiente doloremque, in culpa fuga officiis rerum iure optio obcaecati quasi, voluptatibus, id libero iste ipsum ipsam suscipit consequuntur. Ea.
+                </p>
+            </div>
+            <div class="col-2 wow fadeInRight">
+                <img src="images/001.jpg" alt="">
+            </div>
+        </div>
+    </div>
     <a href="#"id="gotop">TOP</a>
         
     
