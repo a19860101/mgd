@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                //url:"http://api.openweathermap.org/data/2.5/weather?q=Taipei&appid=b1ecbccd638b763d489602917ba47cc3&units=metric&lang=zh_tw",
+                url:"http://api.openweathermap.org/data/2.5/weather",
+                data:{
+                    q:"Taipei",
+                    appid:"b1ecbccd638b763d489602917ba47cc3",
+                    units:"metric",
+                    lang:"zh_tw"
+                },
+                dataType:"json",
+                success:function(e){
+                    console.log(e)
+                },
+                error:function(){
+                    console.log("error");
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</body>
+</html>
