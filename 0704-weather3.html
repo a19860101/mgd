@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+        select {
+            padding: 10px;
+        }
+        
+        .weather {
+            transition: all .3s;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $(myForm).change(function () {
+                $(".weather").empty();
+                var mycity = myForm.city.value;
+                console.log(mycity);
+                $.ajax({
+                    url: "http://api.openweathermap.org/data/2.5/forecast/daily",
+                    data: {
+                        q: mycity,
+                        cnt: 7,
+                        units: "metric",
+                        appid: "b1ecbccd638b763d489602917ba47cc3",
+                    },
+                    dataType: "json",
+                    success: function (e) {
+                        $(e.list).each(function () {
+                            var myDate = new Date(this.dt * 1000);
+                            var Y = myDate.getFullYear();
+                            var M = myDate.getMonth() + 1;
+                            var D = myDate.getDate();
+                            var DAY = myDate.getDay();
+                            //                        if(DAY==0){
+                            //                            DAY = "日"
+                            //                        }
+                            //                        switch(DAY){
+                            //                            case 0:
+                            //                                DAY = "日"
+                            //                        }
+                            //                        var DDD = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六",];
+                            var DDD = ["日曜日", "月曜日", "火曜日", "水曜日", "木曜日", "金曜日", "土曜日", ];
+                            var c = "<div>" + M + "/" + D + DDD[DAY] + "</div>";
+                            c += "<div>" + parseInt(this.temp.day) + "</div>"
+                            c += "<img src='http://openweathermap.org/img/w/" + this.weather[0].icon + ".png'>"
+                            $(".weather").append(c);
+                        });
+                    },
+                    error: function () {
+                        alert("ERROR");
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" name="myForm">
+            <select name="city" id="city">
+                <option value=""></option>
+                <option value="Taipei">台北</option>
+                <option value="London">倫敦</option>
+                <option value="Tokyo">東京</option>
+            </select>
+        </form>
+        <h1>本周天氣</h1>
+        <div class="weather">
+
+        </div>
+    </div>
+</body>
+
+</html>
