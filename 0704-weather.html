@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        .area {
+            font-size: 32px;
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
@@ -17,7 +22,11 @@
                 },
                 dataType:"json",
                 success:function(e){
-                    console.log(e)
+//                    console.log(e.weather[0].description)
+                    var content = "<div class='area'>地區:"+e.name+"</div>";
+                    content += "<div class='temp'>今日溫度:"+e.main.temp+"</div>"
+                    content += "<div class='main'>今日氣候:"+e.weather[0].main+"</div>"
+                    $(".container").append(content);
                 },
                 error:function(){
                     console.log("error");
@@ -27,6 +36,20 @@
     </script>
 </head>
 <body>
+    <div class="container">
+        
+    </div>
+    
+<script>
+    var a = 100;
+    a += 20
+    a = a+20
+    </script>    
+    
+    
+    
+    
+    
     
     
     
