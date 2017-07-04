@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url:"http://opendata2.epa.gov.tw/AQX.json",
+                dataType:"json",
+                success:function(e){
+                    console.log(e);
+                },
+                error:function(){
+                    console.log("error")
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
