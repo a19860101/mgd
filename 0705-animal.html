@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <title>Document</title>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script>
+  $(document).ready(function() {
+   $.ajax({
+    url: "animal.json",
+    dataType: "json",
+    success: function(e) {
+     console.log(e);
+     $(e).each(function() {
+      console.log(this.Variety);
+      var c = "<h2>"+this.Name+"</h2>"
+      c += "<div>"+this.Variety+"</div>"
+      c += "<img src='"+this.ImageName+"' width='300'>"
+      
+      $(".container").append(c);
+     })
+    },
+    error: function() {
+     console.log("Error");
+    }
+   })
+  })
+
+ </script>
+</head>
+
+<body>
+ <div class="container"></div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

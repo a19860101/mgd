@@ -1,78 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <style>
-        .area {
-            font-size: 32px;
-        }
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $.ajax({
-                url:"http://api.openweathermap.org/data/2.5/forecast/daily",
-                data:{
-                    q:"Taipei",
-                    appid:"b1ecbccd638b763d489602917ba47cc3",
-                    units:"metric",
-                    lang:"zh_tw"
-                },
-                dataType:"json",
-                success:function(e){
-                    console.log(e.city.name)
-                    
-                    $(e.list).each(function(){
-                        var myDate = new Date(this.dt*1000);
-                        var y = myDate.getFullYear();
-                        var m = myDate.getMonth()+1;
-                        var d = myDate.getDate();
-                        var D = myDate.getDay();
-                        var DARY = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-                        
-                        var c = "<div>"+y+"</div>"
-                        c += "<div>"+m+"月"+d+"日</div>"
-                        c += "<div>"+DARY[D]+"</div>"
-                        c += "<div>最高溫:"+parseInt(this.temp.max)+"</div>"
-                        c += "<div>最低溫:"+parseInt(this.temp.min)+"</div>"
-                        /*
-                        數學函數
-                        Math.floor();無條件捨去
-                        Math.ceil();無條件進位
-                        Math.round();四捨五入
-                        */
-                        $(".container").append(c);
-                        
-                    });
-                },
-                error:function(){
-                    console.log("error");
-                }
-            })
-        });
-    </script>
-</head>
-<body>
-    <div class="container">
-        
-    </div>
-    
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+<head>
+ <meta charset="UTF-8">
+ <title>Document</title>
+ <style>
+  .container {
+   width: 600px;
+   margin: auto;
+  }
+  .box {
+   width: 100%;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   background-color: #b7ffff;
+   margin-bottom: 15px;
+  }
+  .max {
+   color: #f00;
+  }
+  .min {
+   color: #00f;
+  }
+
+ </style>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ <script>
+  $(document).ready(function() {
+   $.ajax({
+    url: "http://api.openweathermap.org/data/2.5/forecast/daily",
+    data: {
+     q: "Taipei",
+     appid: "b1ecbccd638b763d489602917ba47cc3",
+     units: "metric",
+     lang: "zh_tw"
+    },
+    dataType: "json",
+    success: function(e) {
+     console.log(e.city.name)
+
+     $(e.list).each(function() {
+      var myDate = new Date(this.dt * 1000);
+      var y = myDate.getFullYear();
+      var m = myDate.getMonth() + 1;
+      var d = myDate.getDate();
+      var D = myDate.getDay();
+      var DARY = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+
+      var c = "<div class='box'>"
+      c += "<div class='year'>"+y+"</div>"
+      c += "<div class='date'>"+m+"月"+d+"日</div>"
+      c += "<div class='day'>" + DARY[D] + "</div>"
+      c += "<div class='max'>最高溫:" + parseInt(this.temp.max) + "</div>"
+      c += "<div class='min'>最低溫:" + parseInt(this.temp.min) + "</div>"
+      c += "<div class='desc'>"+this.weather[0].description+"</div>"
+      c += "</div>"
+      /*
+      數學函數
+      Math.floor();無條件捨去
+      Math.ceil();無條件進位
+      Math.round();四捨五入
+      */
+      $(".container").append(c);
+
+     });
+    },
+    error: function() {
+     console.log("error");
+    }
+   })
+  });
+
+ </script>
+</head>
+
+<body>
+ <div class="container">
+ </div>
+
+
+
+
+
+
+
+
+
+
 </body>
+
 </html>
