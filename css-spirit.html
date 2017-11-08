@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        a {
+            display: block;
+            float: left;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            
+/*            background-image: url(s.png);*/
+        }
+        a:nth-of-type(1){
+            background-image: url(s.png);
+/*            background-position: 0 0;*/
+            transition: all .3s;
+        }
+        a:nth-of-type(2){
+            background-image: url(s.png);
+            background-position: 200px 0;
+            transition: all .3s;
+        }
+        a:nth-of-type(1):hover {
+            background-position: 0 -200px;
+        }
+        a:nth-of-type(2):hover {
+            background-position: 200px -200px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#"></a>
+    <a href="#"></a>
+</body>
+</html>
