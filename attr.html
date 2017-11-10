@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        .thumbs img {
+            width: 150px;
+        }
+    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         $(document).ready(function(){
-            console.log($(".thumbs a:nth-of-type(3) img").attr("src"));
-            //attribute
+            $(".thumbs a").click(function(){
+                var newImg = $(this).children("img").attr("src");
+                console.log(newImg);
+                $(".photo img").attr("src",newImg);
+                
+            });
         });
     </script>
 </head>
 <body>
     <div class="photo">
-        <img src="old/images/002.jpg" alt="">
+        <img src="old/images/002.jpg" alt="" width="400">
     </div>
     <div class="thumbs">
-        <a href="#002"><img src="old/images/002.jpg" alt="第一章"></a>
-        <a href="#003"><img src="old/images/003.jpg" alt="第二章"></a>
-        <a href="#004"><img src="old/images/004.jpg" alt="第三章"></a>
+        <a href="#"><img src="old/images/002.jpg" alt="第一章"></a>
+        <a href="#"><img src="old/images/003.jpg" alt="第二章"></a>
+        <a href="#"><img src="old/images/004.jpg" alt="第三章"></a>
+        <a href="#"><img src="old/images/005.jpg" alt="第三章"></a>
     </div>
 </body>
 </html>
