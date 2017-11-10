@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        .big {
+            font-size: 2em;
+            color: #fa0;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".right a").eq(0).click(function(){
+                $(".left .item").removeClass("big");
+                $(".left .item").eq(0).addClass("big");
+            });
+            $(".right a").eq(1).click(function(){
+                $(".left .item").removeClass("big");
+                $(".left .item").eq(1).addClass("big");
+            });
+            $(".right a").eq(2).click(function(){
+                $(".left .item").removeClass("big");
+                $(".left .item").eq(2).addClass("big");
+            });
+        })
+    </script>
+</head>
+
+<body>
+     <div class="left">
+         <div class="item">A</div>
+         <div class="item">B</div>
+         <div class="item">C</div>
+     </div>
+     <div class="right">
+         <a href="#">A</a>
+         <a href="#">B</a>
+         <a href="#">C</a>
+     </div>
+</body>
+
+</html>
