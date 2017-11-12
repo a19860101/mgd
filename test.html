@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+<!--    <script src="jquery-1.12.4.min.js"></script>-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+   
+    <style>
+        #start {
+            border: 0;
+            padding: 10px 20px;
+            text-align: center;
+            display: block;
+            margin: auto;
+/*            letter-spacing: 1em;*/
+        }
+        .touch {
+            display: block;
+            padding: 20px 15px;
+            background-color: #fa0;
+            color: #000;
+            display: none;
+            position: absolute;
+            z-index: 999;
+        }
+        .touch:nth-of-type(1) {
+            left: 30px;
+            top: 200px;
+        }
+        .touch:nth-of-type(2) {
+            right: 30px;
+            top: 200px;
+        }
+        .left,.right {
+            width: 400px;
+            height: 60px;
+            background-color: #dd0000;
+            position: absolute;
+            display: none;
+        }
+        .left {
+            top: 300px;
+            left: 0;
+            transform: rotate(45deg);
+        }
+        .l {
+            top: 300px;
+            left: 0;
+            transform: rotate(0deg);
+        }
+        .right {
+            top: 300px;
+            right: 0;
+            transform: rotate(-45deg);
+        }
+        .r{
+            top: 300px;
+            right: 0;
+            transform: rotate(0deg);
+        }
+        #hohoho {
+            width: 400px;
+            height: 60px;
+            background-color: #fa0;
+            margin: auto;
+            margin-top: 15%;
+            display: none;
+            text-align: center;
+            line-height: 60px;
+        }
+        #replay {
+            display: none;
+            width: 100px;
+            height: 60px;
+            background-color: #0af;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="start" class="animated bounceInDown">START</button>
+    <div class="container">
+        <a href="javascript:;" class="touch animated pulse infinite">touch</a>
+        <a href="javascript:;" class="touch animated pulse infinite">touch</a>
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div id="hohoho">HOHOHOHO</div>
+    <div id="replay">REPLAY</div>
+    <audio id="hohohoAudio">
+        <source src="hohoho.mp3">
+    </audio>
+    <audio id="xmas" loop>
+        <source src="xmas.mp3">
+    </audio>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        $(function() {
+            function start() {
+//                $("#start").removeClass("bounceInDon").addClass("bounceOutUp");
+                $("#start").hide();
+                $(".touch").fadeIn();
+                $(".left,.right").fadeIn();
+                return false;
+            }
+            function hohoho(){
+                var hohoho = document.getElementById("hohohoAudio");
+                $(".touch").hide();
+                $("#hohoho").delay(1000).fadeIn().addClass("animated pulse infinite");
+                $("#replay").delay(6000).fadeIn().addClass("animated pulse infinite");
+                
+                hohoho.play();
+            }
+            $("#start").on("click",function() {
+                start();
+                var xmas = document.getElementById("xmas");
+                xmas.play();
+            });
+            var touchCount = 1;
+            $(".touch").on("click",function() {
+                console.log(touchCount);
+                if(touchCount == 2) {
+                    $(".container").fadeOut();
+                    hohoho();
+                }else{
+                    if(touchCount == 1){
+                        $(".touch").eq(0).css({
+                            "left": "+=50px",
+                            "top": "+=100px"
+                        });
+                        $(".left").addClass("l");
+                        $(".right").addClass("r");
+                        $(".touch").eq(1).css({
+                            "right": "+=50px",
+                            "top": "+=100px"
+                        });
+                    }
+                }
+                touchCount++;
+                return false;
+            });
+            $("#replay").click(function(){
+                window.location.reload();
+                console.log("hh")
+            });
+        })
+    </script>
+</body>
+</html>
