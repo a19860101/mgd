@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        #second {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="start" class="animated bounceInUp">START</button>
+    <div id="second">
+        <div class="touch"><a href="">TOUCH</a></div>
+        <div class="touch"><a href="">TOUCH</a></div>
+    </div>
+    <audio id="bgA" loop>
+        <source src="xmas.mp3">
+    </audio>
+    <script>
+        $(document).ready(function(){
+            function start(){
+//                $("#start").fadeOut();
+                $("#start").addClass("rotateOut");
+                var bgA = document.getElementById("bgA");
+                bgA.play();
+//                $("#second").fadeIn();
+                $("#second").show().addClass("animated bounceIn");
+            }
+            $("#start").click(function(){
+                start();
+            });
+        });
+    </script>
+</body>
+</html>
