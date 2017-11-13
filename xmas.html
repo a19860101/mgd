@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <button id="start">start</button>
+    <button id="pause">pause</button>
+    <audio id="hoA">
+        <source src="hohoho.mp3">
+    </audio>
+    <audio id="bgA" loop>
+        <source src="xmas.mp3">
+    </audio>
+    <script>
+        $(document).ready(function(){
+            var hoA = document.getElementById("hoA");
+            var bgA = document.getElementById("bgA");
+            $("#start").click(function(){
+                bgA.play()
+            });
+            $("#pause").click(function(){
+                bgA.pause();
+            });
+        });
+    </script>
+</body>
+</html>
