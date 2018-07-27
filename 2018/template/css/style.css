@@ -1,0 +1,99 @@
+body {
+    background-color: #12d1f3;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+#hero {
+    height: 800px;
+    background-image: url(img/hero/hero-bg-9da88.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+}
+
+.m-wrapper {
+    width: 960px;
+    height: 600px;
+    /* background-color: #ccc; */
+    margin: auto;
+    position: relative;
+}
+
+.m-wrapper .title {
+    width: 600px;
+    margin: auto;
+}
+
+.m-wrapper .roll {
+    width: 400px;
+    margin: auto;
+    left: calc(50% - 200px);
+    position: absolute;
+}
+
+.m-wrapper .gift {
+    width: 500px;
+    left: 150px;
+    position: absolute;
+    bottom: -30px;
+    z-index: 999;
+}
+
+.m-wrapper .atm {
+    width: 200px;
+    position: absolute;
+    bottom: 30px;
+    right: 150px;
+}
+
+.arrow .fa-angle-double-down {
+    font-size: 100px;
+    color: #aaa;
+}
+
+.arrow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    /* top: 0; */
+    left: 0;
+    bottom: -100px;
+    right: 0;
+    margin: auto;
+}
+.arrow-2 .fa-angle-double-down {
+    font-size: 100px;
+    color: #fff;
+}
+.arrow-2 {
+    text-align: center;
+    /* margin-top: 100px; */
+    /* padding-top: 100px; */
+    position: relative;
+    top: 100px;
+
+    animation: arrow-2 .6s infinite;
+    
+}
+@keyframes arrow {
+    0%{top:100px}
+    15%{top:150px}
+    30%{top:120px}
+    45%{top:150px}
+    60%{top:100px}
+    100%{top:100px}
+}
+@keyframes arrow-2 {
+    0% {top:100px;}
+    50% {top:150px;}
+    100% {top:100px;}
+}
