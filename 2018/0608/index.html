@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=s, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
     <style>
         body {
             background-color: #12d1f3;
             margin: 0;
-            padding: 0; 
+            padding: 0;
         }
+
         img {
             width: 100%;
         }
@@ -22,9 +25,11 @@
             background-position: center;
             background-size: cover;
         }
+
         .container {
             width: 100%;
         }
+
         .wrapper {
             width: 960px;
             height: 600px;
@@ -32,16 +37,19 @@
             margin: auto;
             position: relative;
         }
+
         .wrapper .title {
             width: 600px;
             margin: auto;
         }
+
         .wrapper .roll {
             width: 400px;
             margin: auto;
             left: calc(50% - 200px);
             position: absolute;
         }
+
         .wrapper .gift {
             width: 500px;
             left: 150px;
@@ -49,25 +57,59 @@
             bottom: -30px;
             z-index: 999;
         }
+
         .wrapper .atm {
             width: 200px;
             position: absolute;
             bottom: 30px;
             right: 150px;
         }
+
+        .fa-angle-double-down {
+            font-size: 100px;
+            color: #aaa;
+        }
+
+        .arrow {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            /* top: 0; */
+            left: 0;
+            bottom: -100px;
+            right: 0;
+            margin: auto;
+        }
     </style>
 </head>
+
 <body>
     <div id="hero" class="container">
         <div class="wrapper">
-            <div class="title"><img src="img/hero/site-title-22a51.svg" alt=""></div>
-            <div class="roll"><img src="img/hero/turntable-animate-4479a.gif" alt=""></div>
-            <div class="gift"><img src="img/hero/gifts-4cac6.svg" alt=""></div>
-            <div class="atm"><img src="img/hero/atm-5dd8e.svg" alt=""></div>
+            <div class="title">
+                <img src="img/hero/site-title-22a51.svg" alt="">
+            </div>
+            <div class="roll">
+                <img src="img/hero/turntable-animate-4479a.gif" alt="">
+            </div>
+            <div class="gift">
+                <img src="img/hero/gifts-4cac6.svg" alt="">
+            </div>
+            <div class="atm">
+                <img src="img/hero/atm-5dd8e.svg" alt="">
+            </div>
+            <div class="arrow">
+                <a href="#">
+                    <i class="fas fa-angle-double-down"></i>
+                </a>
+            </div>
         </div>
+
+
     </div>
     <div id="about" class="container">
-        
+
     </div>
 </body>
+
 </html>
