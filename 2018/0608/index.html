@@ -90,6 +90,22 @@
             /* padding-top: 100px; */
             position: relative;
             top: 100px;
+
+            animation: arrow-2 .6s infinite;
+            
+        }
+        @keyframes arrow {
+            0%{top:100px}
+            15%{top:150px}
+            30%{top:120px}
+            45%{top:150px}
+            60%{top:100px}
+            100%{top:100px}
+        }
+        @keyframes arrow-2 {
+            0% {top:100px;}
+            50% {top:150px;}
+            100% {top:100px;}
         }
     </style>
 </head>
@@ -124,7 +140,10 @@
 
     </div>
     <div id="about" class="container">
-
+        <h1>TITLE</h1>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum dicta ullam nam suscipit, laudantium itaque, temporibus aperiam, officiis sunt laborum sit placeat quasi ipsum odit. Dolorem quibusdam tenetur nostrum minima!
+        </p>
     </div>
 </body>
 
